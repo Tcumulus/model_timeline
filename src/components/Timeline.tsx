@@ -8,7 +8,7 @@ interface Props {
 
 const Timeline: React.FC<Props> = ({ data, setSelected }) => {
   return (
-    <div className="flex w-full flex-col">
+    <div className="flex flex-col">
       {
         data.map((element: any, id: number) => {
           return <Model data={element} id={id} setSelected={setSelected} key={"m"+id}/>

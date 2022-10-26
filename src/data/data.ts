@@ -1,11 +1,11 @@
 export const global = {
   models: [
     {
-      abbrevation: "GFS",
+      abbreviation: "GFS",
       name: "Global Forecasting System",
       runs: [
-        { run: "00", window: "+384", start: 270, end: 310 },
-        { run: "06", window: "+384", start: 360, end: 400 }
+        { run: "00", window: "+384", start: 0, end: 100 },
+        { run: "06", window: "+384", start: 500, end: 530 }
       ],
       sites: [
         { name: "meteociel", href: "https://www.meteociel.fr/modeles/gfse_cartes.php" },
@@ -13,7 +13,7 @@ export const global = {
       ]
     },
     {
-      abbrevation: "ECMWF",
+      abbreviation: "ECMWF",
       name: "European Centre for Medium-Range Weather Forecasts",
       runs: [
         { run: "00", window: "+240", start: 400, end: 460 },
