@@ -13,16 +13,20 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="flex flex-col items-center mx-8">
-      <div className="w-full mt-8 p-2 border-2 h-40 overflow-x-scroll">
-        <Timeline data={global.models} setSelected={setSelected} />
+    <div className="">
+      <div className="flex flex-col px-4 h-screen bg-white dark:bg-[#2d2d2d] items-center">
+        <p>HEADER</p>
+        <div className="w-full">
+          <Timeline data={global.models} setSelected={setSelected} />
+        </div>
+          {
+            id === -1 ? null
+            :
+            <Modal data={global.models} id={id} run={run} setSelected={setSelected}/>
+          }
       </div>
-        {
-          id === -1 ? null
-          :
-          <Modal data={global.models} id={id} run={run} setSelected={setSelected}/>
-        }
     </div>
+    
   )
 }
 
