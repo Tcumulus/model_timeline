@@ -30,5 +30,17 @@ export const global = {
         { name: "wetterzentrale.de", href: "https://www.wetterzentrale.de/en/topkarten.php?model=ecm&lid=OP" }
       ]
     }
+  ],
+  sites: [
+    {
+      name: "meteociel.fr",
+      language: "French",
+      href: "https://www.meteociel.fr"
+    },
+    {
+      name: "wetterzentrale.fr",
+      language: "English",
+      href: "https://www.wetterzentrale.de"
+    }
   ]
 }

@@ -1,20 +1,26 @@
 import React from "react"
+import Settings from "./Settings"
 
 interface Props {
+  data: any,
   theme: string,
   toggleTheme: () => void,
+  settings: any, //TODO TYPE
+  setSettings: (arg: any) => void,  //TODO TYPE
+  settingsModal: boolean,
+  setSettingsModal: (settingsModal: boolean) => void
 }
 
-const Header: React.FC<Props> = ({ theme, toggleTheme }) => {
+const Header: React.FC<Props> = ({ data, theme, toggleTheme, settings, setSettings, settingsModal, setSettingsModal }) => {
   return (
-    <div className="h-fit flex flex-row items-center m-4 p-2 text-gray-500 dark:text-gray-100 bg-white dark:bg-[#2d2d2d] shadow-sm border rounded-md outline-none">
+    <div>
       {
-        theme === "dark" ?
-        <input type="checkbox" onClick={toggleTheme} checked={true} className="w-4 h-4 outline-none"/>
+        settingsModal ?
+        <Settings data={data} theme={theme} toggleTheme={toggleTheme} setSettingsModal={setSettingsModal}/>
         :
-        <input type="checkbox" onClick={toggleTheme} checked={false} className="w-4 h-4 outline-none"/>
+        null
       }
-      <p className="h-fit ml-2 text-gray-500 dark:text-gray-100">Dark Mode</p>
+      <p onClick={() => setSettingsModal(true)}>SETTINGS</p>
     </div>
   )
 }

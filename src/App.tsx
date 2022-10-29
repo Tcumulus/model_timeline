@@ -12,6 +12,8 @@ const App: React.FC = () => {
     if(saved) { saved = JSON.parse(saved) }
     return saved || ""
   })
+  const [settings, setSettings] = useState()
+  const [settingsModal, setSettingsModal] = useState<boolean>(false)
 
   const setSelected = (id: number, run: number) => {
     setId(id)
@@ -29,7 +31,9 @@ const App: React.FC = () => {
   return (
     <div className={theme}>
       <div className="flex flex-col px-4 h-screen bg-white dark:bg-[#2d2d2d] items-center">
-        <Header theme={theme} toggleTheme={toggleTheme} />
+        <Header data={global} theme={theme} toggleTheme={toggleTheme} settings={settings} setSettings={setSettings}
+          settingsModal={settingsModal} setSettingsModal={setSettingsModal}
+        />
         <div className="w-full">
           <Timeline data={global.models} setSelected={setSelected} />
         </div>
