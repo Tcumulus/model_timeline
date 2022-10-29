@@ -8,10 +8,9 @@ interface Props {
 }
 
 const Modal: React.FC<Props> = ({ data, id, run, setSelected }) => {
-  console.log(data)
   return (
     <div className="flex flex-row items-center justify-center fixed inset-0 z-10 overflow-y-auto bg-black bg-opacity-60">
-      <div className="flex flex-col justify-center w-fit px-4 py-2 m-2 bg-gray-100 border-2 border-gray-300 dark:bg-[#2d2d2d] rounded">
+      <div className="flex flex-col justify-center w-fit h-fit px-4 py-2 m-2 bg-gray-100 border-2 border-gray-300 dark:bg-[#2d2d2d] rounded">
         <div className="flex flex-row justify-between">
           <p className="px-4 border-2 text-2xl rounded text-gray-500 dark:text-gray-100" style={{borderColor: data[id].color}}>{data[id].abbreviation}</p>
           <p onClick={() => setSelected(-1, -1)} className="text-2xl align-center cursor-pointer text-gray-500 dark:text-gray-100">&times;</p>
