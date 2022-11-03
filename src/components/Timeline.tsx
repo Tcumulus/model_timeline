@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useContext } from "react"
 import Model from "./Model"
+import { CSettings } from "src/App"
 
 interface Props {
   data: any,
@@ -10,9 +11,9 @@ interface Props {
 
 const Timeline: React.FC<Props> = ({ data, name, setId, categoryId }) => {
   const times = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+  const time = new Date().getHours() * 60 + new Date().getMinutes() 
 
-  const timeNow = new Date()
-  const time = timeNow.getHours() * 60 + timeNow.getMinutes() 
+  const settings = useContext(CSettings)
 
   return (
     <div className="flex flex-col w-full">
@@ -21,10 +22,11 @@ const Timeline: React.FC<Props> = ({ data, name, setId, categoryId }) => {
         <div className="flex flex-row">
           {
             data.models.map((element: any, id: number) => {
+              if (!settings.models[categoryId].includes(id)) { return null }
               return (
-                <div className="flex flex-row items-center">
+                <div className="flex flex-row items-center" key={id}>
                   <div className="w-4 h-4 ml-4 rounded-full" style={{backgroundColor: element.color}}/>
-                  <p className="mx-2" key={id}>{element.abbreviation}</p>
+                  <p className="mx-2">{element.abbreviation}</p>
                 </div>
               )
             })
@@ -46,7 +48,8 @@ const Timeline: React.FC<Props> = ({ data, name, setId, categoryId }) => {
           <div className="flex flex-col mt-2">
             {
               data.models.map((element: any, id: number) => {
-                return <Model data={element} id={id} setId={setId} categoryId={categoryId} key={"m"+id}/>
+                if (!settings.models[categoryId].includes(id)) { return null }
+                return <Model data={element} id={id} setId={setId} categoryId={categoryId} key={id}/>
               })
             }
           </div>

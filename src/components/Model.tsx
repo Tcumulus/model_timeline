@@ -20,15 +20,15 @@ const Model: React.FC<Props> = ({ data, id, setId, categoryId }) => {
           const end = element.end + settings.utc*60 <= 1440 ? element.end + settings.utc*60 : element.end + settings.utc*60 - 1440
           if(end < start) {
             return (
-            <div>
+            <div key={index}>
               <Block start={0} end={end} data={element} id={id} runId={index} setId={setId} 
-                color={data.color} categoryId={categoryId} key={"r1"+index} />
+                color={data.color} categoryId={categoryId}/>
               <Block start={start} end={1440} data={element} id={id} runId={index} setId={setId} 
-                color={data.color} categoryId={categoryId} key={"r2"+index} />
+                color={data.color} categoryId={categoryId}/>
             </div>)
           }
           return <Block start={start} end={end} data={element} id={id} runId={index} setId={setId} 
-            color={data.color} categoryId={categoryId} key={"r"+index}
+            color={data.color} categoryId={categoryId} key={index}
           />
         })
       }

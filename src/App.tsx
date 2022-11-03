@@ -5,7 +5,7 @@ import Timeline from "./components/Timeline"
 import { data } from "./data/data"
 
 export const CData = createContext(data)
-export const CSettings = createContext({ utc: 1 })
+export const CSettings = createContext({ utc: 1, models: [[0, 2], [0]] })
 
 const App: React.FC = () => {
   const [id, setId] = useState<any>({ category: -1, id: -1, run: -1 })
@@ -14,27 +14,47 @@ const App: React.FC = () => {
     if(saved) { saved = JSON.parse(saved) }
     return saved || ""
   })
-  const [settings, setSettings] = useState({ utc: 1 })
+  const [models, setModels] = useState<number[][]>(() => {
+    let saved = localStorage.getItem("models")
+    if(saved) { return JSON.parse(saved) }
+    return [[0, 1], [0]]
+  })
   const [settingsModal, setSettingsModal] = useState<boolean>(false)
-
-  const setSelected = (id: number, run: number) => {
-    setId(id)
-  }
+  const utcOffset = new Date().getTimezoneOffset() * -1 / 60
 
   const toggleTheme = () => {
     theme === "dark" ? setTheme("") : setTheme("dark")
+  }
+
+  const changeModelSettings = (categoryId: number, id: number) => {
+    const newModels = [...models]
+    newModels.map((category: number[], index: number) => {
+      if(index == categoryId) {
+        if(category.includes(id)) {
+          category = category.filter((item: number) => { return item !== id })
+        } else {
+          category.push(id)
+        }
+        newModels[index] = category
+      }
+    })
+    setModels(newModels)
   }
 
   useEffect(() => {
     localStorage.setItem("theme", JSON.stringify(theme))
   }, [theme])
 
+  useEffect(() => {
+    localStorage.setItem("models", JSON.stringify(models))
+  }, [models])
+
   return (
     <div className={theme}>
       <CData.Provider value={data}>
-      <CSettings.Provider value={settings}>
+      <CSettings.Provider value={{ utc: utcOffset, models: models }}>
         <div className="flex flex-col px-4 h-screen bg-white dark:bg-[#2d2d2d] text-gray-500 dark:text-gray-100 items-center">
-          <Header theme={theme} toggleTheme={toggleTheme} setSettings={setSettings}
+          <Header theme={theme} toggleTheme={toggleTheme} changeModelSettings={changeModelSettings}
             settingsModal={settingsModal} setSettingsModal={setSettingsModal}
           />
           <div className="w-full">

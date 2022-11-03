@@ -6,17 +6,17 @@ import settings_light from "../assets/settings_light.png"
 interface Props {
   theme: string,
   toggleTheme: () => void,
-  setSettings: (arg: any) => void,
+  changeModelSettings: (category: number, id: number) => void,
   settingsModal: boolean,
   setSettingsModal: (settingsModal: boolean) => void
 }
 
-const Header: React.FC<Props> = ({ theme, toggleTheme, setSettings, settingsModal, setSettingsModal }) => {
+const Header: React.FC<Props> = ({ theme, toggleTheme, changeModelSettings, settingsModal, setSettingsModal }) => {
   return (
     <div className="w-full border-b border-gray-100 dark:border-gray-500">
       {
         settingsModal ?
-        <Settings theme={theme} toggleTheme={toggleTheme} setSettingsModal={setSettingsModal}/>
+        <Settings theme={theme} toggleTheme={toggleTheme} setSettingsModal={setSettingsModal} changeModelSettings={changeModelSettings}/>
         :
         null
       }
