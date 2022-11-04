@@ -5,7 +5,7 @@ import Modal from "./components/Modal"
 import Timeline from "./components/Timeline"
 import { data } from "./data/data"
 
-const TRACKING_ID = "G-P9PX5G89NW"
+const TRACKING_ID = "G-4X3DV9DHH9"
 ReactGA.initialize(TRACKING_ID)
 
 export const CData = createContext(data)
