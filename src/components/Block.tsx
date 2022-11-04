@@ -14,10 +14,15 @@ interface Props {
 const Block: React.FC<Props> = ({ start, end, data, id, runId, setId, color, categoryId }) => {
   const width = (end - start)
   return (
-    <div onClick={() => setId({ category: categoryId, id: id, run: runId })} className="flex flex-row border-[3px] rounded cursor-pointer opacity-80 hover:opacity-100 hover:font-bold" 
+    <div onClick={() => setId({ category: categoryId, id: id, run: runId })} 
+      className="flex flex-row h-8 items-center border-[3px] rounded cursor-pointer opacity-80 hover:opacity-100 hover:font-bold" 
       style={{width: width+"px", position: "absolute", left: start+"px", borderColor: color}}
     >
-      <p className="mx-1">{data.run}</p>
+      {
+        width >= 30 ?
+        <p className="mx-1">{data.run}</p>
+        : null
+      }
     </div>
   )
 }

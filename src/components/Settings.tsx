@@ -16,7 +16,7 @@ const Settings: React.FC<Props> = ({ theme, toggleTheme, setSettingsModal, chang
     <div className="flex flex-row items-center justify-center fixed inset-0 z-20 overflow-y-auto bg-black bg-opacity-60">
       <div className="flex flex-col justify-center px-4 py-2 m-2 bg-gray-100 border-2 border-gray-300 dark:bg-[#2d2d2d] rounded">
         <div className="flex flex-row justify-between">
-          <p className="px-4 text-2xl">Settings</p>
+          <p className="text-2xl">Settings</p>
           <p onClick={() => setSettingsModal(false)} className="text-2xl align-center cursor-pointer">&times;</p>
         </div>
         <hr className="my-2"/>

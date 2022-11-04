@@ -19,9 +19,10 @@ const Timeline: React.FC<Props> = ({ data, name, setId, categoryId }) => {
     <div className="flex flex-col w-full">
       <div className="flex flex-row justify-between items-center m-2">
         <h2 className="text-xl">{name}</h2>
-        <div className="flex flex-row">
+        <div className="flex flex-row flex-wrap justify-end">
           {
             data.models.map((element: any, id: number) => {
+              console.log(settings.models)
               if (!settings.models[categoryId].includes(id)) { return null }
               return (
                 <div className="flex flex-row items-center" key={id}>
