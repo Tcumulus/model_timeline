@@ -1,8 +1,12 @@
 import React, { useState, useEffect, createContext } from "react"
+import ReactGA from 'react-ga'
 import Header from "./components/Header"
 import Modal from "./components/Modal"
 import Timeline from "./components/Timeline"
 import { data } from "./data/data"
+
+const TRACKING_ID = "G-4X3DV9DHH9"
+ReactGA.initialize(TRACKING_ID)
 
 export const CData = createContext(data)
 export const CSettings = createContext({ utc: 1, models: [[0, 1, 2], [0], [0, 1]] })
