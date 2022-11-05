@@ -15,7 +15,7 @@ export const data = {
           ],
           sites: [
             { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/gfse_cartes.php" },
-            { name: "wetterzentrale.de", href: "https://www.wetterzentrale.de/en/topkarten.php?model=ecm&lid=OP" }
+            { name: "wetterzentrale.de", href: "https://www.wetterzentrale.de/en/topkarten.php?model=gfs&lid=OP" }
           ]
         },
         {
@@ -28,7 +28,7 @@ export const data = {
             { run: "12", window: "+240", start: 1080, end: 1140 },
           ],
           sites: [
-            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/gfse_cartes.php" },
+            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/ecmwf.php" },
             { name: "wetterzentrale.de", href: "https://www.wetterzentrale.de/en/topkarten.php?model=ecm&lid=OP" }
           ]
         },
@@ -57,7 +57,8 @@ export const data = {
             { run: "18", window: "+120", start: 1240, end: 1270 },
           ],
           sites: [
-            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/ukmoeu.php" }
+            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/icone_cartes.php" },
+            { name: "wetterzentrale.de", href: "https://www.wetterzentrale.de/en/topkarten.php?model=ico&lid=OP" }
           ]
         },
         {
@@ -70,7 +71,8 @@ export const data = {
             { run: "12", window: "+240", start: 930, end: 990 },
           ],
           sites: [
-            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/ukmoeu.php" }
+            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/geme_cartes.php" },
+            { name: "wetterzentrale.de", href: "https://www.wetterzentrale.de/en/topkarten.php?model=gem&lid=OP" }
           ]
         }
       ]
@@ -94,8 +96,7 @@ export const data = {
             { run: "21", window: "+51", start: 60, end: 135 },
           ],
           sites: [
-            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/gfse_cartes.php" },
-            { name: "wetterzentrale.de", href: "https://www.wetterzentrale.de/en/topkarten.php?model=ecm&lid=OP" }
+            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/arome.php" }
           ]
         },
         {
@@ -110,8 +111,8 @@ export const data = {
             { run: "18", window: "+48", start: 1290, end: 1340 },
           ],
           sites: [
-            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/gfse_cartes.php" },
-            { name: "wetterzentrale.de", href: "https://www.wetterzentrale.de/en/topkarten.php?model=ecm&lid=OP" }
+            { name: "weerplaza.nl", href: "https://www.weerplaza.nl/weerkaarten/harmonie/" },
+            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/harmonie.php" }
           ]
         },
         {
@@ -130,8 +131,7 @@ export const data = {
             { run: "21", window: "+48", start: 45, end: 80 },
           ],
           sites: [
-            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/gfse_cartes.php" },
-            { name: "wetterzentrale.de", href: "https://www.wetterzentrale.de/en/topkarten.php?model=ecm&lid=OP" }
+            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/icon-d2.php" }
           ]
         },
         {
@@ -167,8 +167,8 @@ export const data = {
             { run: "18", window: "+384", start: 1320, end: 1470 }
           ],
           sites: [
-            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/gfse_cartes.php" },
-            { name: "wetterzentrale.de", href: "https://www.wetterzentrale.de/en/topkarten.php?model=ecm&lid=OP" }
+            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/gefs_cartes.php" },
+            { name: "wetterzentrale.de", href: "https://www.wetterzentrale.de/en/topkarten.php?map=1&model=gfs&lid=AVG" }
           ]
         },
         {
@@ -181,8 +181,7 @@ export const data = {
             { run: "12", window: "+384", start: 1140, end: 1215 }
           ],
           sites: [
-            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/gfse_cartes.php" },
-            { name: "wetterzentrale.de", href: "https://www.wetterzentrale.de/en/topkarten.php?model=ecm&lid=OP" }
+            { name: "wetterzentrale.de", href: "https://www.wetterzentrale.de/en/topkarten.php?map=1&model=ecm&lid=AVG" }
           ]
         },
       ],
