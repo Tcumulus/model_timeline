@@ -51,10 +51,23 @@ export const data = {
           country: "DE",
           color: "#ed15b0",
           runs: [
-            { run: "00", window: "+180", start: 150, end: 195 },
-            { run: "06", window: "+120", start: 510, end: 540 },
-            { run: "12", window: "+180", start: 870, end: 915 },
-            { run: "18", window: "+120", start: 1230, end: 1260 },
+            { run: "00", window: "+180", start: 160, end: 200 },
+            { run: "06", window: "+120", start: 520, end: 550 },
+            { run: "12", window: "+180", start: 880, end: 920 },
+            { run: "18", window: "+120", start: 1240, end: 1270 },
+          ],
+          sites: [
+            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/ukmoeu.php" }
+          ]
+        },
+        {
+          abbreviation: "GEM",
+          name: "Global Environmental Multiscale Model",
+          country: "CA",
+          color: "#cc001b",
+          runs: [
+            { run: "00", window: "+240", start: 210, end: 270 },
+            { run: "12", window: "+240", start: 930, end: 990 },
           ],
           sites: [
             { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/ukmoeu.php" }
@@ -69,22 +82,73 @@ export const data = {
           abbreviation: "Arome",
           name: "Application of Research at the Operational Mesoscale",
           country: "FR",
-          color: "#0230ad",
+          color: "#be03fc",
           runs: [
-            { run: "00", window: "+51", start: 200, end: 250 },
-            { run: "03", window: "+51", start: 380, end: 430 },
-            { run: "06", window: "+51", start: 560, end: 610 },
-            { run: "09", window: "+51", start: 740, end: 790 },
-            { run: "12", window: "+51", start: 920, end: 970 },
-            { run: "15", window: "+51", start: 1100, end: 1150 },
-            { run: "18", window: "+51", start: 1280, end: 1330 },
-            { run: "21", window: "+51", start: 20, end: 70 },
+            { run: "00", window: "+51", start: 240, end: 315 },
+            { run: "03", window: "+51", start: 420, end: 495 },
+            { run: "06", window: "+51", start: 600, end: 675 },
+            { run: "09", window: "+51", start: 780, end: 855 },
+            { run: "12", window: "+51", start: 960, end: 1035 },
+            { run: "15", window: "+51", start: 1140, end: 1215 },
+            { run: "18", window: "+51", start: 1320, end: 1395 },
+            { run: "21", window: "+51", start: 60, end: 135 },
           ],
           sites: [
             { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/gfse_cartes.php" },
             { name: "wetterzentrale.de", href: "https://www.wetterzentrale.de/en/topkarten.php?model=ecm&lid=OP" }
           ]
-        }
+        },
+        {
+          abbreviation: "Harmonie",
+          name: "HIRLAM ALADIN Research on Mesoscale Operational NWP in Euromed",
+          country: "NL",
+          color: "#d3fc03",
+          runs: [
+            { run: "00", window: "+48", start: 210, end: 260 },
+            { run: "06", window: "+48", start: 570, end: 620 },
+            { run: "12", window: "+48", start: 930, end: 980 },
+            { run: "18", window: "+48", start: 1290, end: 1340 },
+          ],
+          sites: [
+            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/gfse_cartes.php" },
+            { name: "wetterzentrale.de", href: "https://www.wetterzentrale.de/en/topkarten.php?model=ecm&lid=OP" }
+          ]
+        },
+        {
+          abbreviation: "ICON-D2",
+          name: "Icosahedral Nonhydrostatic D2",
+          country: "DE",
+          color: "#fc033d",
+          runs: [
+            { run: "00", window: "+48", start: 225, end: 260 },
+            { run: "03", window: "+48", start: 405, end: 440 },
+            { run: "06", window: "+48", start: 585, end: 620 },
+            { run: "09", window: "+48", start: 765, end: 800 },
+            { run: "12", window: "+48", start: 945, end: 980 },
+            { run: "15", window: "+48", start: 1125, end: 1160 },
+            { run: "18", window: "+48", start: 1305, end: 1340 },
+            { run: "21", window: "+48", start: 45, end: 80 },
+          ],
+          sites: [
+            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/gfse_cartes.php" },
+            { name: "wetterzentrale.de", href: "https://www.wetterzentrale.de/en/topkarten.php?model=ecm&lid=OP" }
+          ]
+        },
+        {
+          abbreviation: "SWISS-HD",
+          name: "SWISS-HD (Kachelman)",
+          country: "CH",
+          color: "#03fcc6",
+          runs: [
+            { run: "00", window: "+72", start: 285, end: 495 },
+            { run: "06", window: "+72", start: 645, end: 855 },
+            { run: "12", window: "+72", start: 1005, end: 1215 },
+            { run: "18", window: "+72", start: 1365, end: 135 },
+          ],
+          sites: [
+            { name: "meteologix.com", href: "https://meteologix.com/be/model-charts/swisshd-eu" }
+          ]
+        },
       ]
     },
 
@@ -97,10 +161,10 @@ export const data = {
           country: "USA",
           color: "#ff7d26",
           runs: [
-            { run: "00", window: "+384", start: 210, end: 390 },
-            { run: "06", window: "+384", start: 570, end: 750 },
-            { run: "12", window: "+384", start: 930, end: 1110 },
-            { run: "18", window: "+384", start: 1290, end: 1470 }
+            { run: "00", window: "+384", start: 240, end: 390 },
+            { run: "06", window: "+384", start: 600, end: 750 },
+            { run: "12", window: "+384", start: 960, end: 1110 },
+            { run: "18", window: "+384", start: 1320, end: 1470 }
           ],
           sites: [
             { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/gfse_cartes.php" },
@@ -113,8 +177,8 @@ export const data = {
           country: "EU",
           color: "#26ff81",
           runs: [
-            { run: "00", window: "+384", start: 420, end: 480 },
-            { run: "12", window: "+384", start: 1140, end: 1200 }
+            { run: "00", window: "+384", start: 420, end: 495 },
+            { run: "12", window: "+384", start: 1140, end: 1215 }
           ],
           sites: [
             { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/gfse_cartes.php" },
@@ -122,18 +186,6 @@ export const data = {
           ]
         },
       ],
-    }
-  ],
-  sites: [
-    {
-      name: "meteociel.fr",
-      language: "French",
-      href: "https://www.meteociel.fr"
-    },
-    {
-      name: "wetterzentrale.fr",
-      language: "English",
-      href: "https://www.wetterzentrale.de"
     }
   ]
 }
