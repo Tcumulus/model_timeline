@@ -16,8 +16,8 @@ const Modal: React.FC<Props> = ({ id, setId }) => {
   const endTime = _id.runs[id.run].end + settings.utc*60
   const startHour = Math.floor(startTime / 60) <= 24 ? Math.floor(startTime / 60) : Math.floor(startTime / 60)-24
   const endHour = Math.floor(endTime / 60) <= 24 ? Math.floor(endTime / 60) : Math.floor(endTime / 60)-24
-  const startMinute = (startTime % 60) > 10 ? (startTime % 60) : "0" + (startTime % 60)
-  const endMinute = (endTime % 60) > 10 ? (endTime % 60) : "0" + (endTime % 60)
+  const startMinute = (startTime % 60) >= 10 ? (startTime % 60) : "0" + (startTime % 60)
+  const endMinute = (endTime % 60) >= 10 ? (endTime % 60) : "0" + (endTime % 60)
   const startTimeString = startHour + "h" + startMinute
   const endTimeString = endHour + "h" + endMinute
 
