@@ -74,6 +74,21 @@ export const data = {
             { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/geme_cartes.php" },
             { name: "wetterzentrale.de", href: "https://www.wetterzentrale.de/en/topkarten.php?model=gem&lid=OP" }
           ]
+        },
+        {
+          abbreviation: "ARPEGE",
+          name: "Action de Recherche Petite Echelle Grande Echelle",
+          country: "FR",
+          color: "#be03fc",
+          runs: [
+            { run: "00", window: "+114", start: 240, end: 300 },
+            { run: "06", window: "+102", start: 600, end: 660 },
+            { run: "12", window: "+114", start: 960, end: 1020 },
+            { run: "18", window: "+102", start: 1320, end: 1380 },
+          ],
+          sites: [
+            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/arpegee_cartes.php" }
+          ]
         }
       ]
     },

@@ -5,7 +5,7 @@ import Timeline from "./components/Timeline"
 import { data } from "./data/data"
 
 export const CData = createContext(data)
-export const CSettings = createContext({ utc: 1, models: [[0, 1, 2], [0], [0, 1]] })
+export const CSettings = createContext({ utc: 1, models: [[0, 1, 2], [0, 1], [0, 1]] })
 
 const App: React.FC = () => {
   const [id, setId] = useState<any>({ category: -1, id: -1, run: -1 })
@@ -17,7 +17,7 @@ const App: React.FC = () => {
   const [models, setModels] = useState<number[][]>(() => {
     let saved = localStorage.getItem("models")
     if(saved) { return JSON.parse(saved) }
-    return [[0, 1, 2], [0], [0, 1]]
+    return [[0, 1, 2], [0, 1], [0, 1]]
   })
   const [settingsModal, setSettingsModal] = useState<boolean>(false)
   const utcOffset = new Date().getTimezoneOffset() * -1 / 60
@@ -53,11 +53,11 @@ const App: React.FC = () => {
     <div className={theme}>
       <CData.Provider value={data}>
       <CSettings.Provider value={{ utc: utcOffset, models: models }}>
-        <div className="flex flex-col px-4 h-screen bg-white dark:bg-[#2d2d2d] text-gray-500 dark:text-gray-100 items-center">
+        <div className="flex flex-col min-h-screen px-4 bg-white dark:bg-[#2d2d2d] text-gray-500 dark:text-gray-100 items-center">
           <Header theme={theme} toggleTheme={toggleTheme} changeModelSettings={changeModelSettings}
             settingsModal={settingsModal} setSettingsModal={setSettingsModal}
           />
-          <div className="w-full">
+          <div className="w-full mb-4">
             <Timeline data={data.categories[0]} categoryId={0} name="Global Models" setId={setId}/>
             <Timeline data={data.categories[1]} categoryId={1} name="Short-term Models" setId={setId}/>
             <Timeline data={data.categories[2]} categoryId={2} name="Ensembles" setId={setId}/>
