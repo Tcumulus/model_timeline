@@ -31,7 +31,7 @@ const Header: React.FC<Props> = ({ theme, toggleTheme, changeModelSettings, sett
       <div className="flex flex-row w-full justify-between items-center my-4">
         <div className="flex flex-row items-center">
           <img src={logo} className="ml-4 h-14 w-14" />
-          <h1 className="ml-4 text-3xl">Weather Model Timeline</h1>
+          <h1 className="ml-4 text-xl w-20 sm:w-full sm:text-3xl">Weather Model Timeline</h1>
         </div>
         <div className="flex flex-row items-center">
           {
