@@ -81,9 +81,9 @@ export const data = {
           country: "FR",
           color: "#be03fc",
           runs: [
-            { run: "00", window: "+102", start: 180, end: 240 },
+            { run: "00", window: "+102", start: 180, end: 225 },
             { run: "06", window: "+102", start: 600, end: 645 },
-            { run: "12", window: "+114", start: 900, end: 960 },
+            { run: "12", window: "+114", start: 900, end: 945 },
             { run: "18", window: "+102", start: 1320, end: 1365 },
           ],
           sites: [
