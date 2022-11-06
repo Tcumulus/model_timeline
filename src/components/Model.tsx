@@ -13,7 +13,7 @@ const Model: React.FC<Props> = ({ data, id, setId, categoryId }) => {
   const settings = useContext(CSettings)
 
   return (
-    <div className="flex flex-row h-8 mt-1">
+    <div className="flex flex-row h-8 mb-1">
       {
         data.runs.map((element: any, index: number) => {
           const start = element.start + settings.utc*60 <= 1440 ? element.start + settings.utc*60 : element.start + settings.utc*60 - 1440
