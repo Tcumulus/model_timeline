@@ -37,7 +37,7 @@ const Modal: React.FC<Props> = ({ id, setId }) => {
         <div className="flex flex-col">
           {
             _id.sites.map((element: any, index: number) => {
-              return <a href={element.href} key={index} className="text-sm underline">{element.name}</a>
+              return <a href={element.href} target="_blank" key={index} className="text-sm underline">{element.name}</a>
             })
           }
         </div>

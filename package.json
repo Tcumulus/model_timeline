@@ -1,7 +1,6 @@
 {
-  "name": "react-typescript-tailwind",
-  "version": "0.1.0",
-  "private": true,
+  "name": "model-timeline",
+  "version": "0.2.0",
   "dependencies": {
     "firebase": "^9.12.1",
     "react": "^17.0.2",
