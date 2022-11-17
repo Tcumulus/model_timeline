@@ -104,11 +104,11 @@ export const data = {
             { run: "00", window: "+51", start: 180, end: 255 },
             { run: "03", window: "+51", start: 360, end: 405 },
             { run: "06", window: "+51", start: 600, end: 675 },
-            { run: "09", window: "+51", start: 755, end: 790 },
+            { run: "09", window: "+51", start: 755, end: 795 },
             { run: "12", window: "+51", start: 900, end: 975 },
             { run: "15", window: "+51", start: 1080, end: 1125 },
             { run: "18", window: "+51", start: 1330, end: 1405 },
-            { run: "21", window: "+51", start: 35, end: 70 },
+            { run: "21", window: "+51", start: 35, end: 75 },
           ],
           sites: [
             { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/arome.php" }
