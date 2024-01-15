@@ -10,8 +10,9 @@ interface Props {
 }
 
 const Timeline: React.FC<Props> = ({ data, name, setId, categoryId }) => {
+  const tot = 1440
   const times = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
-  const time = new Date().getHours() * 60 + new Date().getMinutes() 
+  const time = (new Date().getHours() * 60 + new Date().getMinutes()) / tot
 
   const settings = useContext(CSettings)
 
@@ -19,7 +20,7 @@ const Timeline: React.FC<Props> = ({ data, name, setId, categoryId }) => {
     <div>
       {
         settings.models[categoryId].length <= 0 ? null :
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col">
           <div className="flex flex-row justify-between items-center m-2">
             <h2 className="text-xl">{name}</h2>
             <div className="flex flex-row flex-wrap justify-end">
@@ -37,13 +38,13 @@ const Timeline: React.FC<Props> = ({ data, name, setId, categoryId }) => {
             </div>
           </div>
           <div className="px-4 border-2 rounded-xl overflow-x-scroll scrollbar">
-            <div className="flex flex-col" style={{position: "relative"}}>
-              <div className="h-full w-0 z-10 border-r-2 border-red-400" style={{position: "absolute", left: time+"px"}} />
-              <div className="flex flex-row w-full mb-4 ml-2">
+            <div className="flex flex-col  min-w-[1440px]" style={{position: "relative"}}>
+              <div className="h-full w-0 z-10 border-r-2 border-red-400" style={{position: "absolute", left: time*100+"%"}} />
+              <div className="flex flex-row min-w-[1440px] mb-4 ml-2">
                 {
                   times.map((element: number, id: number) => {
                     return (<p className="z-15 text-xs text-gray-400 dark:text-gray-300" key={id} 
-                      style={{position: "absolute", left: (element*60)+"px"}}
+                      style={{position: "absolute", left: (element*6000)/tot+"%"}}
                     >{element}</p>)
                   })
                 }

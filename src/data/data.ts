@@ -67,8 +67,8 @@ export const data = {
           country: "CA",
           color: "#cc001b",
           runs: [
-            { run: "00", window: "+240", start: 210, end: 275 },
-            { run: "12", window: "+240", start: 930, end: 995 },
+            { run: "00", window: "+240", start: 215, end: 275 },
+            { run: "12", window: "+240", start: 935, end: 995 },
           ],
           sites: [
             { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/geme_cartes.php" },
