@@ -17,6 +17,11 @@ const App: React.FC = () => {
     }
     return ""
   })
+  const [themeMode, setThemeMode] = useState<string>(() => {
+    let saved = localStorage.getItem("mode")
+    if(saved) return JSON.parse(saved)
+    return "auto"
+  })
   const [models, setModels] = useState<number[][]>(() => {
     let saved = localStorage.getItem("models")
     if(saved) { return JSON.parse(saved) }
@@ -26,6 +31,7 @@ const App: React.FC = () => {
   const utcOffset = new Date().getTimezoneOffset() * -1 / 60
 
   const toggleTheme = () => {
+    setThemeMode("custom")
     theme === "dark" ? setTheme("") : setTheme("dark")
   }
 
@@ -47,6 +53,10 @@ const App: React.FC = () => {
   useEffect(() => {
     localStorage.setItem("theme", JSON.stringify(theme))
   }, [theme])
+
+  useEffect(() => {
+    localStorage.setItem("mode", JSON.stringify(themeMode))
+  }, [themeMode])
 
   useEffect(() => {
     localStorage.setItem("models", JSON.stringify(models))
