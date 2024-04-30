@@ -131,6 +131,41 @@ export const data = {
           ]
         },
         {
+          abbreviation: "Harmonie43",
+          name: "HIRLAM ALADIN Research on Mesoscale Operational NWP in Euromed cyclus 43",
+          country: "NL",
+          color: "#d3fc03",
+          runs: [
+            { run: "00", window: "+53", start: 170, end: 180 },
+            { run: "01", window: "+53", start: 230, end: 240 },
+            { run: "02", window: "+53", start: 290, end: 300 },
+            { run: "03", window: "+53", start: 350, end: 360 },
+            { run: "04", window: "+53", start: 410, end: 420 }, 
+            { run: "05", window: "+53", start: 470, end: 480 },
+            { run: "05", window: "+53", start: 530, end: 540 },
+            { run: "07", window: "+53", start: 590, end: 600 },
+            { run: "08", window: "+53", start: 650, end: 660 },
+            { run: "09", window: "+53", start: 710, end: 720 },
+            { run: "10", window: "+53", start: 770, end: 780 },
+            { run: "11", window: "+53", start: 830, end: 840 },
+            { run: "12", window: "+53", start: 890, end: 900 },
+            { run: "13", window: "+53", start: 950, end: 960 },
+            { run: "14", window: "+53", start: 1010, end: 1020 },
+            { run: "15", window: "+53", start: 1070, end: 1080 },
+            { run: "16", window: "+53", start: 1130, end: 1140 }, 
+            { run: "17", window: "+53", start: 1190, end: 1200 },
+            { run: "18", window: "+53", start: 1250, end: 1260 },
+            { run: "19", window: "+53", start: 1310, end: 1320 },
+            { run: "20", window: "+53", start: 1370, end: 1380 },
+            { run: "21", window: "+53", start: 1430, end: 1440 },
+            { run: "22", window: "+53", start: 50, end: 60 },
+            { run: "23", window: "+53", start: 110, end: 120 },
+          ],
+          sites: [
+            { name: "meteologix.com", href: "https://www.meteociel.fr/modeles/harmonie.php?ech=3&mode=1&map=530" }
+          ]
+        },
+        {
           abbreviation: "ICON-D2",
           name: "Icosahedral Nonhydrostatic D2",
           country: "DE",

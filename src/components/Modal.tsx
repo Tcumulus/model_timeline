@@ -25,9 +25,12 @@ const Modal: React.FC<Props> = ({ id, setId }) => {
     <div className="flex flex-row items-center justify-center fixed inset-0 z-20 overflow-y-auto bg-black bg-opacity-60">
       <div className="flex flex-col justify-center w-fit h-fit px-4 py-2 m-2 bg-gray-100 border-2 border-gray-300 dark:bg-[#2d2d2d] rounded">
         <div className="flex flex-row justify-between">
-          <p className="px-4 border-4 text-2xl rounded font-bold" style={{borderColor: _id.color}}>
-            {_id.abbreviation}
-          </p>
+          <div className="flex flex-row items-end">
+            <p className="px-4 border-4 text-2xl rounded font-bold" style={{borderColor: _id.color}}>
+              {_id.abbreviation}
+              <span className=" text-base ml-2">{_id.runs[id.run].run}z</span>
+            </p>
+          </div>
           <p onClick={() => setId({ category: -1, id: -1, run: -1 })} className="text-2xl align-center cursor-pointer">&times;</p>
         </div>
         <hr className="my-2"/>
