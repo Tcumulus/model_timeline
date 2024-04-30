@@ -25,7 +25,7 @@ const App: React.FC = () => {
   const [models, setModels] = useState<number[][]>(() => {
     let saved = localStorage.getItem("models")
     if(saved) { return JSON.parse(saved) }
-    return [[0, 1, 2], [0, 1, 2], [0, 1]]
+    return [[0, 1, 3], [0, 1, 2], [0, 1]]
   })
   const [settingsModal, setSettingsModal] = useState<boolean>(false)
   const utcOffset = new Date().getTimezoneOffset() * -1 / 60
