@@ -162,7 +162,7 @@ export const data = {
             { run: "23", window: "+53", start: 110, end: 120 },
           ],
           sites: [
-            { name: "meteologix.com", href: "https://www.meteociel.fr/modeles/harmonie.php?ech=3&mode=1&map=530" }
+            { name: "meteociel.fr", href: "https://www.meteociel.fr/modeles/harmonie.php?ech=3&mode=1&map=530" }
           ]
         },
         {
